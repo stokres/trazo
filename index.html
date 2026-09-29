@@ -169,6 +169,7 @@ kbd {
   <canvas id="game" aria-label="Trazo: draw the ground for an ink drop"></canvas>
   <div class="overlay" id="overlay">
     <h1 id="headline">Trazo</h1>
+    <p class="sub" id="tagline">Accessible edition: kinder hills, ink to spare and a drop in a hurry.</p>
     <p id="line1">Draw the ground near the drop. Downhill it gains speed, uphill it loses it.</p>
     <p id="line2">Every stroke feeds the blot. Collect drops to refill your ink.</p>
     <div class="score" id="score" hidden></div>
@@ -251,6 +252,7 @@ kbd {
   const rankingList = document.getElementById('ranking');
   const startBtn = document.getElementById('start');
   const hintEl = document.getElementById('hint');
+  const taglineEl = document.getElementById('tagline');
   const muteBtn = document.getElementById('mute');
   const fullscreenBtn = document.getElementById('fullscreen');
   const controlsEl = document.getElementById('controls');
@@ -265,6 +267,7 @@ kbd {
       ranking: 'Your best runs',
       line1: 'Draw the ground near the drop. Downhill it gains speed, uphill it loses it.',
       line2: 'Every stroke feeds the blot. Collect drops to refill your ink.',
+      tagline: 'Accessible edition: kinder hills, ink to spare and a drop in a hurry.',
       start: 'Start', again: 'Again', resume: 'Resume', pause: 'Paused',
       caught: 'The blot caught you', fell: 'You fell into the void',
       record: 'Best {d}', newRecord: 'New best', hudBest: 'best {d}', meters: '{n} m',
@@ -279,6 +282,7 @@ kbd {
       ranking: '你的最佳成绩',
       line1: '在墨滴附近画出地面。下坡加速，上坡减速。',
       line2: '每一笔都会喂养墨团。收集墨滴来补充墨水。',
+      tagline: '无障碍版：坡更温柔，墨水管够，墨滴还赶时间。',
       start: '开始', again: '再来一次', resume: '继续', pause: '暂停',
       caught: '墨团吞没了你', fell: '你掉进了虚空',
       record: '最佳 {d}', newRecord: '新纪录', hudBest: '最佳 {d}', meters: '{n} 米',
@@ -293,6 +297,7 @@ kbd {
       ranking: 'Tus mejores partidas',
       line1: 'Dibuja el suelo cerca de la gota. Cuesta abajo gana velocidad, cuesta arriba la pierde.',
       line2: 'Cada trazo alimenta a la mancha. Recoge gotas para recargar tinta.',
+      tagline: 'Versión más accesible: cuestas amables, tinta de sobra y una gota con prisa.',
       start: 'Empezar', again: 'Otra vez', resume: 'Seguir', pause: 'Pausa',
       caught: 'Te alcanzó la mancha', fell: 'Caíste al vacío',
       record: 'Récord {d}', newRecord: 'Nuevo récord', hudBest: 'récord {d}', meters: '{n} m',
@@ -307,6 +312,7 @@ kbd {
       ranking: 'أفضل جولاتك',
       line1: 'ارسم الأرض قرب القطرة. تزداد سرعتها في النزول وتقل في الصعود.',
       line2: 'كل خط ترسمه يغذّي البقعة. اجمع القطرات لتعيد ملء الحبر.',
+      tagline: 'نسخة أسهل: مرتفعات ألطف، حبر بلا حساب، وقطرة مستعجلة.',
       start: 'ابدأ', again: 'مرة أخرى', resume: 'تابع', pause: 'إيقاف مؤقت',
       caught: 'التهمتك البقعة', fell: 'سقطت في الفراغ',
       record: 'أفضل نتيجة {d}', newRecord: 'رقم قياسي جديد', hudBest: 'الأفضل {d}', meters: '{n} م',
@@ -321,6 +327,7 @@ kbd {
       ranking: 'Suas melhores partidas',
       line1: 'Desenhe o chão perto da gota. Na descida ela ganha velocidade, na subida perde.',
       line2: 'Cada traço alimenta a mancha. Pegue gotas para recarregar a tinta.',
+      tagline: 'Versão mais acessível: ladeiras simpáticas, tinta de sobra e uma gota com pressa.',
       start: 'Começar', again: 'De novo', resume: 'Continuar', pause: 'Pausa',
       caught: 'A mancha te pegou', fell: 'Você caiu no vazio',
       record: 'Recorde {d}', newRecord: 'Novo recorde', hudBest: 'recorde {d}', meters: '{n} m',
@@ -335,6 +342,7 @@ kbd {
       ranking: 'Permainan terbaikmu',
       line1: 'Gambar tanah di dekat tetesan. Menurun makin cepat, menanjak makin lambat.',
       line2: 'Setiap goresan memberi makan noda. Kumpulkan tetesan untuk mengisi tinta.',
+      tagline: 'Versi lebih ramah: tanjakan santai, tinta melimpah, dan setetes tinta yang buru-buru.',
       start: 'Mulai', again: 'Main lagi', resume: 'Lanjut', pause: 'Jeda',
       caught: 'Noda menangkapmu', fell: 'Kamu jatuh ke kehampaan',
       record: 'Rekor {d}', newRecord: 'Rekor baru', hudBest: 'rekor {d}', meters: '{n} m',
@@ -349,6 +357,7 @@ kbd {
       ranking: 'Tes meilleures parties',
       line1: 'Dessine le sol près de la goutte. En descente elle accélère, en montée elle ralentit.',
       line2: 'Chaque trait nourrit la tache. Ramasse des gouttes pour recharger ton encre.',
+      tagline: 'Version plus accessible : des pentes gentilles, de l’encre à gogo et une goutte pressée.',
       start: 'Jouer', again: 'Rejouer', resume: 'Reprendre', pause: 'Pause',
       caught: 'La tache t’a rattrapé', fell: 'Tu es tombé dans le vide',
       record: 'Record {d}', newRecord: 'Nouveau record', hudBest: 'record {d}', meters: '{n} m',
@@ -363,6 +372,7 @@ kbd {
       ranking: 'あなたのベスト記録',
       line1: 'しずくの近くに地面を描こう。下り坂で加速し、上り坂で減速する。',
       line2: '線を描くたびにシミが育つ。しずくを集めてインクを補充しよう。',
+      tagline: 'やさしめバージョン：坂はゆるく、インクはたっぷり、しずくはせっかち。',
       start: 'スタート', again: 'もう一度', resume: '再開', pause: '一時停止',
       caught: 'シミに飲み込まれた', fell: '奈落に落ちた',
       record: 'ベスト {d}', newRecord: '新記録', hudBest: 'ベスト {d}', meters: '{n} m',
@@ -377,6 +387,7 @@ kbd {
       ranking: 'Твои лучшие забеги',
       line1: 'Рисуй землю рядом с каплей. Под гору она разгоняется, в гору замедляется.',
       line2: 'Каждый штрих кормит кляксу. Собирай капли, чтобы пополнить чернила.',
+      tagline: 'Версия попроще: горки помягче, чернил вдоволь, а капля вечно спешит.',
       start: 'Начать', again: 'Ещё раз', resume: 'Продолжить', pause: 'Пауза',
       caught: 'Клякса тебя поймала', fell: 'Ты упал в пустоту',
       record: 'Рекорд {d}', newRecord: 'Новый рекорд', hudBest: 'рекорд {d}', meters: '{n} м',
@@ -391,6 +402,7 @@ kbd {
       ranking: 'Deine besten Läufe',
       line1: 'Zeichne den Boden nahe am Tropfen. Bergab wird er schneller, bergauf langsamer.',
       line2: 'Jeder Strich füttert den Klecks. Sammle Tropfen, um Tinte nachzufüllen.',
+      tagline: 'Barrierearme Fassung: freundlichere Hügel, Tinte im Überfluss und ein Tropfen mit Eile.',
       start: 'Los', again: 'Nochmal', resume: 'Weiter', pause: 'Pause',
       caught: 'Der Klecks hat dich erwischt', fell: 'Du bist ins Leere gestürzt',
       record: 'Rekord {d}', newRecord: 'Neuer Rekord', hudBest: 'Rekord {d}', meters: '{n} m',
@@ -430,6 +442,7 @@ kbd {
   document.getElementById('line1').textContent = L.line1;
   document.getElementById('line2').textContent = L.line2;
   document.getElementById('hint').textContent = L.hint;
+  taglineEl.textContent = L.tagline;
   document.getElementById('rankingTitle').textContent = L.ranking;
   document.getElementById('pauseLabel').textContent = L.pauseBtn;
   document.getElementById('restartLabel').textContent = L.restartBtn;
@@ -492,8 +505,8 @@ kbd {
       noiseBuf = ac.createBuffer(1, ac.sampleRate * 2, ac.sampleRate);
       const data = noiseBuf.getChannelData(0);
       for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
-      const scratch = loopNoise('bandpass', 3000, 1);
-      scratch.filter.Q.value = 0.9;
+      const scratch = loopNoise('lowpass', 900, 0.8);
+      scratch.filter.Q.value = 0.4;
       scratchGain = scratch.gain;
       scratchFilter = scratch.filter;
       rumbleGain = loopNoise('lowpass', 110, 0.5).gain;
@@ -541,8 +554,9 @@ kbd {
       },
       scratch(level) {
         if (!ac) return;
-        scratchGain.gain.setTargetAtTime(level * 0.3, ac.currentTime, 0.03);
-        scratchFilter.frequency.setTargetAtTime(1800 + level * 2600, ac.currentTime, 0.05);
+        // Soft brush swish: low-passed noise, gentle level, and a slower ramp so it never crackles.
+        scratchGain.gain.setTargetAtTime(level * 0.22, ac.currentTime, 0.05);
+        scratchFilter.frequency.setTargetAtTime(600 + level * 1200, ac.currentTime, 0.08);
       },
       rumble(level) {
         if (ac) rumbleGain.gain.setTargetAtTime(level * 1.2, ac.currentTime, 0.2);
@@ -551,7 +565,7 @@ kbd {
       splat(power) { burst(900, 0.16, 0.5 * power); tone('sine', 150, 60, 0.12, 0.3 * power); },
       gulp() { tone('sine', 230, 55, 0.24, 0.45); burst(320, 0.2, 0.22); },
       death() { burst(700, 0.7, 0.9); tone('sine', 190, 38, 0.8, 0.55); },
-      dry() { burst(2400, 0.07, 0.18); tone('square', 110, 90, 0.08, 0.05); },
+      dry() { burst(1300, 0.08, 0.12); tone('sine', 150, 110, 0.09, 0.05); },
     };
   })();
 
@@ -1340,6 +1354,7 @@ kbd {
     const stretch = clamp(speed / 700, 0, 0.22);
     const breathe = d.grounded && !reduceMotion ? Math.sin(t * 3) * 0.03 : 0;
     const squash = d.squash + breathe;
+    drawSpeedStreaks(d, R, speed);
     ctx.save();
     ctx.fillStyle = INK;
     // Pivot on the contact point so the drop hugs the slope and squashes against it.
@@ -1367,6 +1382,39 @@ kbd {
     for (const [ex, ey] of eyes) {
       ctx.beginPath();
       ctx.arc(ex + lookX, ey + lookY, R * 0.14, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Belly mark: a tiny lightning bolt, the sign of the faster drop.
+    ctx.fillStyle = PAPER;
+    ctx.beginPath();
+    const bx = R * 0.38, by = R * 0.4, bs = R * 0.38;
+    const bolt = [[0.15, -1], [-0.6, 0.1], [-0.08, 0.1], [-0.25, 1], [0.6, -0.2], [0.08, -0.2]];
+    bolt.forEach(([px, py], i) => (i ? ctx.lineTo : ctx.moveTo).call(ctx, bx + px * bs, by + py * bs));
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+
+  // Ink dashes trailing behind the drop: always there, longer the faster it goes.
+  function drawSpeedStreaks(d, R, speed) {
+    const isMoving = speed > 40;
+    const dx = isMoving ? d.vx / speed : 1, dy = isMoving ? d.vy / speed : 0;
+    const px = -dy, py = dx;
+    const base = R * 0.7 + Math.min(speed, 700) * 0.04;
+    const streaks = [[-0.75, 1.0], [0, 1.5], [0.75, 0.8]];
+    ctx.save();
+    ctx.fillStyle = INK;
+    ctx.globalAlpha = 0.45;
+    for (const [off, k] of streaks) {
+      const len = base * k;
+      const nx = d.x - dx * (R * 1.35) + px * off * R;
+      const ny = d.y - dy * (R * 1.35) + py * off * R;
+      ctx.beginPath();
+      ctx.moveTo(nx + px * 1.3, ny + py * 1.3);
+      ctx.lineTo(nx - px * 1.3, ny - py * 1.3);
+      ctx.lineTo(nx - dx * len, ny - dy * len);
+      ctx.closePath();
       ctx.fill();
     }
     ctx.restore();
@@ -1663,6 +1711,7 @@ kbd {
     sound.init();
     if (!isResume) reset();
     state = 'play';
+    taglineEl.hidden = true;
     hintEl.hidden = true;
     overlay.hidden = true;
     controlsEl.hidden = false;
